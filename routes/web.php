@@ -49,7 +49,7 @@ Route::get('/index', [App\Http\Controllers\site\SiteController::class,'index'])-
 Route::get('/sommer', [App\Http\Controllers\site\SiteController::class,'sommer'])->name('sommer');
 Route::get('/winter', [App\Http\Controllers\site\SiteController::class,'winter'])->name('winter');
 Route::get('/price', [App\Http\Controllers\site\SiteController::class,'price'])->name('price');
-
+//شمشش
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
