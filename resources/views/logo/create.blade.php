@@ -1,4 +1,4 @@
-  @extends('layouts.app')
+  @extends('admin.layout.app')
 @section('content')
 
     <!-- Content Header (Page header) -->
@@ -33,7 +33,7 @@
 @endif
         
         
-        <form action="{{ route('logo.store') }}" method="POST" class="shadow p-12" enctype="multipart/form-data">
+        <form action="{{ route('logostore') }}" method="POST" class="shadow p-12" enctype="multipart/form-data">
                 @csrf
       <div class="row">
         <div class="col-md-12">

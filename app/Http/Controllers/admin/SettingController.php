@@ -15,7 +15,7 @@ class SettingController extends Controller
     public function index()
     {
           $setting = Setting::all();
-      // dd(count($setting));
+        // dd(count($setting));
     
      //   return view('products.index',compact('products'))
          //   ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -48,7 +48,7 @@ class SettingController extends Controller
     
         Setting::create($request->all());
      
-        return redirect()->route('setting')
+        return redirect()->route('setting.index')
                         ->with('success','Contact created successfully.');
     }
 
@@ -58,11 +58,9 @@ class SettingController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show( $setting)
+    public function show(Setting $setting)
     {
-      
-       $setting =    Setting::find($setting);
-     //  dd($setting);
+       // dd($setting);
         return view('setting.show',compact('setting'));
     }
 
@@ -72,10 +70,9 @@ class SettingController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit( $setting)
+    public function edit(Setting $setting)
     {
-       // dd($setting);
-         $setting =    Setting::find($setting);
+        //dd($setting);
         return view('setting.edit',compact('setting'));
     }
 
@@ -86,12 +83,8 @@ class SettingController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-  //  public function update(Request $request, Setting $setting)
-    public function update(Request $request,  $id)
+    public function update(Request $request, Setting $setting)
     {
-       // dd("123");
-      //  dd($id);
-      $setting = Setting::find($id);
         $request->validate([
             'address' => 'required',
             'telephone' => 'required',
@@ -99,7 +92,7 @@ class SettingController extends Controller
     
         $setting->update($request->all());
     
-        return redirect()->route('setting')
+        return redirect()->route('setting.index')
                         ->with('success','Contact updated successfully');
     }
 
@@ -109,25 +102,11 @@ class SettingController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-   /* public function destroy(Setting $setting)
+    public function destroy(Setting $setting)
     {
-        dd("123");
         $setting->delete();
     
         return redirect()->route('setting.index')
                         ->with('success','Contact deleted successfully');
-    }*/
-    
-public function settingdestroy(Request $request ,$id)
-{
-    $setting = Setting::find($id);
-    $setting->delete();
-
-    return redirect()->route('setting')
-    ->with('success','Contact deleted successfully');
-  // $notification = array('message' => 'removed successfully', 'alert_type' => 'success');
-  //    return redirect()->back()->with($notification);
-
-
-}
+    }
 }

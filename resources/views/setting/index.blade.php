@@ -1,4 +1,6 @@
-  @extends('layouts.app')
+  {{--@extends('layouts.app')--}}
+  @extends('admin.layout.app')
+
 @section('content')
         <div class="card">
               <div class="card-header">
@@ -8,7 +10,7 @@
             <div class="row">
                 
                 <div class="col-3">
-                <a href="{{ route('setting.create') }}">   
+                <a href="{{ route('settingcreate') }}">   
                 <button style="margin-left:20px;margin-top:10px; width:150px;" type="button" class="btn btn-block btn-success ">Add</button>  </a> 
                 </div>
                 <div class="col-9">
@@ -42,19 +44,21 @@
                     <td> {{$sett->telephone}} </td>
                    
                     <td>
-                        <form action="{{ route('setting.destroy',$sett->id) }}" method="POST">
-                           <a class="btn btn-primary btn-sm" href="{{ route('setting.show',$sett->id) }}">
+                        {{--<form action="{{ route('settingdestroy',$sett->id) }}" method="POST">--}}
+                          <form action="{{ url('admin/settingdestroy/'.$sett->id) }}"  method="post">
+                            @csrf
+                           <a class="btn btn-primary btn-sm" href="{{ route('settingshow',$sett->id) }}">
                               <i class="fas fa-folder">
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="{{ route('setting.edit',$sett->id) }}">
+                          <a class="btn btn-info btn-sm" href="{{ route('settingedit',$sett->id) }}">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
                             @csrf
-                    @method('DELETE')
+                    {{--@method('DELETE')--}}
 <!--
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">

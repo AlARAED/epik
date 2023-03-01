@@ -1,4 +1,4 @@
-  @extends('layouts.app')
+@extends('admin.layout.app')
 @section('content')
         <div class="card">
               <div class="card-header">
@@ -8,7 +8,7 @@
             <div class="row">
                 
                 <div class="col-3">
-                <a href="{{ route('logo.create') }}">   
+                <a href="{{ route('logocreate') }}">   
                 <button style="margin-left:20px;margin-top:10px; width:150px;" type="button" class="btn btn-block btn-success ">Add</button>  </a> 
                 </div>
                 <div class="col-9">
@@ -47,20 +47,21 @@
                    
                    
                     <td>
-                        <form action="{{ route('logo.destroy',$img->id) }}" method="POST">
-                           <a class="btn btn-primary btn-sm" href="{{ route('logo.show',$img->id) }}">
+                        {{--<form action="{{ route('logo.destroy',$img->id) }}" method="POST">--}}
+                         <form action="{{ url('admin/logodestroy/'.$img->id) }}"  method="post">
+                           <a class="btn btn-primary btn-sm" href="{{ route('logoshow',$img->id) }}">
                               <i class="fas fa-folder">
                               </i>
                               View 
                           </a>
                           
-                          <a class="btn btn-info btn-sm" href="{{ route('logo.edit',$img->id) }}">
+                          <a class="btn btn-info btn-sm" href="{{ route('logoedit',$img->id) }}">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
                             @csrf
-                    @method('DELETE')
+                    
 <!--
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
