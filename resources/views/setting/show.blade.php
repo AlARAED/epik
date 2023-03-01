@@ -1,11 +1,11 @@
-  @extends('layouts.app')
+   @extends('admin.layout.app')
 @section('content')
  <section class="content">
      
         <div class="row">
                 
                 <div class="col-3">
-                <a href="{{ route('setting.index') }}">   
+                <a href="{{ route('setting') }}">   
                 <button style="margin-left:8px;margin-top:10px; width:150px;" type="button" class="btn btn-block btn-default ">Back</button>  </a> 
                 </div>
                 <div class="col-9">

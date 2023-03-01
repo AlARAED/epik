@@ -1,4 +1,5 @@
-  @extends('layouts.app')
+  {{--@extends('layouts.app')--}}
+  @extends('admin.layout.app')
 @section('content')
 
     <!-- Content Header (Page header) -->
@@ -33,7 +34,7 @@
 @endif
         
         
-        <form action="{{ route('setting.store') }}" method="POST">
+        <form action="{{ route('settingstore') }}" method="POST">
     @csrf
       <div class="row">
         <div class="col-md-12">

@@ -1,4 +1,4 @@
-  @extends('layouts.app')
+@extends('admin.layout.app')
 @section('content')
 
     <!-- Content Header (Page header) -->
@@ -35,9 +35,9 @@
         </div>
     @endif  
         
-        <form action="{{ route('setting.update',$setting->id) }}" method="POST">
+        <form action="{{ route('settingupdate',$setting->id) }}" method="POST">
         @csrf
-        @method('PUT')
+        
                
       <div class="row">
         <div class="col-md-12">

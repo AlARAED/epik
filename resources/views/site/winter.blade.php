@@ -629,12 +629,12 @@
                                         <ul>
                                             <li class="flex">
                                                 <i class="icon icon-location color_white "></i>
-                                                <p class="color_white">Dorf 37, 6352 Ellmau, Austria</p>
+                                                <p class="color_white">{{$setting[0]->address}}</p>
 
                                             </li>
                                             <li class="flex">
                                                 <i class="icon icon-phone color_white "></i>
-                                                <a href="#" class="color_white">+43 670 5555 409</a>
+                                                <a href="#" class="color_white">{{$setting[0]->telephone}}</a>
                                             </li>
                                         </ul>
                                     </div>

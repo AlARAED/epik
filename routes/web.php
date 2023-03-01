@@ -34,12 +34,42 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
 
 
+    Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('setting');
+    Route::get('/settingcreate', [App\Http\Controllers\SettingController::class,'create'])->name('settingcreate');
+    Route::post('/settingstore', [App\Http\Controllers\SettingController::class,'store'])->name('settingstore');
+    //Route::post('/settingdestroy', [App\Http\Controllers\SettingController::class,'destroy'])->name('settingdestroy');
+    Route::post('/settingdestroy/{id}', [App\Http\Controllers\SettingController::class,'settingdestroy']);
 
 
-//  Route::resource('setting', SettingController::class);
+    Route::get('/settingshow/{id}', [App\Http\Controllers\SettingController::class,'show'])->name('settingshow');
+    Route::get('/settingedit/{id}', [App\Http\Controllers\SettingController::class,'edit'])->name('settingedit');
 
-//  Route::resource('logo', ImageController::class);
+  //  Route::post('/settingupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('settingupdate');
+    Route::post('/settingupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('settingupdate');
 
+
+   // Route::resource('setting', SettingController::class);
+
+ //  Route::resource('logo', ImageController::class);
+
+      Route::get('/logo', [App\Http\Controllers\ImageController::class,'index'])->name('logo');
+    Route::get('/logocreate', [App\Http\Controllers\ImageController::class,'create'])->name('logocreate');
+    Route::post('/logostore', [App\Http\Controllers\ImageController::class,'store'])->name('logostore');
+    //Route::post('/settingdestroy', [App\Http\Controllers\SettingController::class,'destroy'])->name('settingdestroy');
+    Route::post('/logodestroy/{id}', [App\Http\Controllers\ImageController::class,'logodestroy']);
+
+
+    Route::get('/logoshow/{id}', [App\Http\Controllers\SettingController::class,'show'])->name('logoshow');
+    Route::get('/logoedit/{id}', [App\Http\Controllers\SettingController::class,'edit'])->name('logoedit');
+
+  //  Route::post('/settingupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('settingupdate');
+    Route::post('/logoupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('logoupdate');
+      
+        
+        
+        
+        
+        
 
 // Route::get('/image', [ImageController::class,'index'])->name('image.index');
 // Route::post('/image', [ImageController::class,'store'])->name('image.store');
