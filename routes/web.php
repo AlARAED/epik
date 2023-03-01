@@ -74,12 +74,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
   //  Route::post('/settingupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('settingupdate');
     Route::post('/logoupdate/{id}', [App\Http\Controllers\SettingController::class,'update'])->name('logoupdate');
-      
-        
-        
-        
-        
-        
+
+
+
+
+
+
 
 // Route::get('/image', [ImageController::class,'index'])->name('image.index');
 // Route::post('/image', [ImageController::class,'store'])->name('image.store');
