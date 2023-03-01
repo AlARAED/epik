@@ -27,6 +27,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
 
     Route::get('/home', [App\Http\Controllers\HomeadminController::class,'index'])->name('home');
+    Route::get('/allpricewinter', [App\Http\Controllers\admin\PriceWinterController::class,'get_all_pricewinter'])->name('allpricewinter');
+    Route::post('/save_price_product', [App\Http\Controllers\admin\PriceWinterController::class,'save_price_product'])->name('save_price_product');
+    Route::post('/update_price_product/{id}', [App\Http\Controllers\admin\PriceWinterController::class,'update_price_product']);
+    Route::post('/Delete_price_product/{id}', [App\Http\Controllers\admin\PriceWinterController::class,'Delete_price_product']);
+
+
+
+
+
 //  Route::resource('setting', SettingController::class);
 
 //  Route::resource('logo', ImageController::class);
@@ -49,7 +58,6 @@ Route::get('/index', [App\Http\Controllers\site\SiteController::class,'index'])-
 Route::get('/sommer', [App\Http\Controllers\site\SiteController::class,'sommer'])->name('sommer');
 Route::get('/winter', [App\Http\Controllers\site\SiteController::class,'winter'])->name('winter');
 Route::get('/price', [App\Http\Controllers\site\SiteController::class,'price'])->name('price');
-//شمشش
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

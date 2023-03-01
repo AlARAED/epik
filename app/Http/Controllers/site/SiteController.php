@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\site;
 
 use App\Http\Controllers\Controller;
+use App\Models\PriceWinter;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -31,7 +32,8 @@ class SiteController extends Controller
     public function price()
     {
 
-        return view('site.price');
+        $prices=PriceWinter::all();
+        return view('site.price',compact('prices'));
     }
 
 

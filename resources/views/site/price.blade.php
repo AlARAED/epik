@@ -58,10 +58,10 @@
                                             <ul id="menu_main" class="menu_main_nav">
                                                 <!-- Menu: Home -->
                                                 <li class="menu-item current-menu-ancestor">
-                                                    <a href="/"><span>Home</span></a>                                                
+                                                    <a href="/"><span>Home</span></a>
                                                 </li>
                                                 <!-- /Menu: Home -->
-                                                
+
                                                 <!-- Menu: Classes -->
                                                 <li class="menu-item">
                                                     <a href="winter.html"><span>Winter</span></a>
@@ -71,14 +71,14 @@
                                                 <li class="menu-item">
                                                     <a href="prices.html"><span>prices</span></a>
                                                 </li>
-                                                <!-- /Menu: Rent -->                                            
+                                                <!-- /Menu: Rent -->
                                                 <!-- Menu: Contact Us -->
                                                 <li class="menu-item">
                                                     <a href="contact-us.html"><span>Contact Us</span></a>
                                                 </li>
                                                 <!-- /Menu: Contact Us -->
                                             </ul>
-                                        </nav>                                       
+                                        </nav>
                                     </div>
                                     <!-- /Main menu -->
                                 </div>
@@ -86,7 +86,7 @@
                         </div>
                     </header>
                     <!-- /Header -->
-                    
+
                     <!-- Header mobile -->
                     <div class="header_mobile">
                         <div class="container">
@@ -97,7 +97,7 @@
                                     <img src="images/logo_light.png" class="logo_main" alt="">
                                 </a>
                             </div>
-                            <!-- /Logo -->                        
+                            <!-- /Logo -->
                         </div>
                         <div class="side_wrap">
                             <div class="close">Close</div>
@@ -107,19 +107,19 @@
                                     <ul id="menu_mobile" class="menu_main_nav">
                                         <!-- Menu: Home -->
                                         <li class="menu-item ">
-                                            <a href="#"><span>Home</span></a>                                       
+                                            <a href="#"><span>Home</span></a>
                                         </li>
-                                        <!-- /Menu: Home --> 
+                                        <!-- /Menu: Home -->
                                         <!-- Menu: Sommer -->
                                         <li class="menu-item current-menu-ancestor">
-                                            <a href="sommer.html"><span>Sommer</span></a>                                       
+                                            <a href="sommer.html"><span>Sommer</span></a>
                                         </li>
-                                        <!-- /Menu: Sommer -->                                                                       
+                                        <!-- /Menu: Sommer -->
                                         <!-- Menu: Rent -->
                                         <li class="menu-item current-menu-ancestor">
                                             <a href="prices.html"><span>Prices</span></a>
                                         </li>
-                                        <!-- /Menu: Rent -->                                    
+                                        <!-- /Menu: Rent -->
                                         <li class="menu-item">
                                             <a href="contact-us.html"><span>Contact Us</span></a>
                                         </li>
@@ -151,16 +151,16 @@
                     <div class="container">
                         <!--page title-->
                         <div class="sc_section margin_top_6em margin_bottom_5_5em title-page-prices">
-                            <div class="sc_section_inner">                                
-                                <div class="sc_section_content_wrap">                                                
-                                    <div class="sc_skills sc_skills_counter margin_top_tiny" data-type="counter" data-caption="Skills">                                            
+                            <div class="sc_section_inner">
+                                <div class="sc_section_content_wrap">
+                                    <div class="sc_skills sc_skills_counter margin_top_tiny" data-type="counter" data-caption="Skills">
                                         <h2 class="sc_skills_title sc_item_title sc_item_title_with_descr">This is title page</h2>
                                         <div class="sc_skills_descr sc_item_descr">
-                                            this is description for this page this is description for this page                                                
+                                            this is description for this page this is description for this page
                                         </div>
-                                                                                        
+
                                     </div>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                         <!--/page title-->
@@ -182,75 +182,30 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                            @foreach ($prices as $price )
+
+
                                             <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
+                    <td>{{ $price->title }}</td>
+                    <td>{{ $price->first_day }}€</td>
+                    <td>{{ $price->second_day }}€</td>
+                    <td>{{ $price->thirs_day }}€</td>
+                    <td>{{ $price->fourth_day }}€</td>
+                    <td>{{ $price->fifth_day }}€</td>
+                    <td>{{ $price->sixth_siventh_day }}€</td>
+                    <td>{{ $price->inventy_day }}€</td>
                                             </tr>
-                                            <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Top Ski***</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                                <td>14.€</td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
-                                    
+
                                     </table>
-                                </div>                                   
+                                </div>
                             </div>
                             <!-- /Content -->
                         </div>
                     </div>
-                    
+
                     <!-- /Page content wrap -->
                     <!--Footer-->
                     <footer class="footer">
@@ -264,7 +219,7 @@
                                                 <li class="flex">
                                                     <i class="icon icon-location color_white "></i>
                                                     <p class="color_white">Dorf 37, 6352 Ellmau, Austria</p>
-                                                    
+
                                                 </li>
                                                 <li class="flex">
                                                     <i class="icon icon-phone color_white "></i>
@@ -298,10 +253,10 @@
                                     <div class="weather">
                                         <h3 class="color_white text-center title">wetter</h3>
                                         <div style="border-left: 1px solid #51c9f3;">
-                                            
+
                                             <div class="wpc-weather-id">
                                                 <div id="wpc-weather" class="wpc-weather-1 medium">
-                                                    <div class="now">                                                    
+                                                    <div class="now">
                                                         <div class="time_symbol climacon" style="fill:#ffffff">
                                                             <svg id="cloudDrizzleSun" class="climacon mx-auto climacon_cloudDrizzleSun" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="15 15 70 70" enable-background="new 15 15 70 70" xml:space="preserve">
                                                                 <clipPath id="cloudFillClip">
@@ -344,7 +299,7 @@
                                                         </div>
                                                         <div class="time_temperature ">2</div>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -356,7 +311,7 @@
                                                             <a href="#" target="_blank" class="social_icons social_facebook color_white">
                                                                 <span class="icon-facebook"></span>
                                                             </a>
-                                                        </div>                                                    
+                                                        </div>
                                                         <div class="sc_socials_item">
                                                             <a href="#" target="_blank" class="social_icons social_instagram-3 color_white">
                                                                 <span class="icon-instagram-3"></span>
@@ -374,7 +329,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--copyright-->                 
+                            <!--copyright-->
                             <div class="flex copyright">
                                 <ul class="flex">
                                     <li>
@@ -393,8 +348,8 @@
                                 <div>
                                     <p class="color_white">Created By: <a href="https://www.motiv-x.com/" class="color_white">Motiv-X</a></p>
                                 </div>
-                            </div>                    
-                            <!--/copyright-->  
+                            </div>
+                            <!--/copyright-->
                         </div>
 
                     </footer>
