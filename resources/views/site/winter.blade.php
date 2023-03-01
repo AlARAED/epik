@@ -323,11 +323,13 @@
                                 <div class="adv-section">
                                     <div class="content_wrap">
                                         <div class="flex gap-20">
+
+
                                             <div class="w-50">
-                                                <img style="max-width: 100%;" src="images/adv/adv1.jpg" alt="adv image">
+                                                <img style="max-width: 100%;" src="{{ asset('uploads/'.$ads->img1)}}" alt="adv image">
                                             </div>
                                             <div class="w-50">
-                                                <img style="max-width: 100%;" src="images/adv/adv2.jpg" alt="adv image">
+                                                <img style="max-width: 100%;" src="{{ asset('uploads/'.$ads->img2)}}" alt="adv image">
                                             </div>
 
                                         </div>
@@ -559,61 +561,15 @@
                 <!-- logos slider -->
                 <div class="container">
                     <div class="owl-carousel brands-logos">
+                        @foreach ($BrandWinter  as  $BrandWint)
+
                         <div>
                             <a href="#">
-                                <img src="images/brands/burton-hd.png" alt="burton">
+                                <img src="{{ asset('uploads/'.$BrandWint->img)}}" alt="burton">
                             </a>
                         </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/dynastar-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/elan-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/faction-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/fischer-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/flow-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/head-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/k2-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/lowa-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/atomic-hd.png" alt="burton">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="images/brands/bolle-hd.png" alt="burton">
-                            </a>
-                        </div>
+                 @endforeach
+
                     </div>
                 </div>
                 <!-- /logos slider -->

@@ -31,6 +31,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::post('/save_price_product', [App\Http\Controllers\admin\PriceWinterController::class,'save_price_product'])->name('save_price_product');
     Route::post('/update_price_product/{id}', [App\Http\Controllers\admin\PriceWinterController::class,'update_price_product']);
     Route::post('/Delete_price_product/{id}', [App\Http\Controllers\admin\PriceWinterController::class,'Delete_price_product']);
+    Route::get('/All_ads', [App\Http\Controllers\admin\AdsController::class,'All_ads'])->name('All_ads');
+    Route::get('/allBrand', [App\Http\Controllers\admin\BrandWinterController::class,'get_all_brand'])->name('get_all_brand');
+    Route::post('/save_brand', [App\Http\Controllers\admin\BrandWinterController::class,'save_brand'])->name('save_brand');
+
+    Route::post('/Delete_brand/{id}', [App\Http\Controllers\admin\BrandWinterController::class,'Delete_brand']);
+
+
+
+    Route::post('/update_ads', [App\Http\Controllers\admin\AdsController::class,'update_ads'])->name('update_ads');
+
 
 
 
