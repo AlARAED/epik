@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
- use Illuminate\Http\Request;
+use App\Models\BrandWinter;
+use App\Models\ContactUs;
+use App\Models\MainCategoryProductSomer;
+use App\Models\PriceWinter;
+use Illuminate\Http\Request;
 
 class HomeadminController extends Controller
 {
@@ -14,7 +18,16 @@ class HomeadminController extends Controller
     public function index()
     {
 
-         return view('admin.homedasborad');
+
+
+        $PriceWintercount= PriceWinter::count();
+        $productsommer=MainCategoryProductSomer::count();
+        $brand=BrandWinter::count();
+        $ContactUs=ContactUs::count();
+
+
+
+         return view('admin.homedasborad',compact('PriceWintercount','productsommer','brand','ContactUs'));
      }
 
     /**

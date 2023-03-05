@@ -3,25 +3,26 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\BrandWinter;
+use App\Models\MainCategoryProductSomer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class BrandWinterController extends Controller
+class MainCategoryProductSommer extends Controller
 {
 
-
-    public function get_all_brand ()
+    public function get_all_product_sommer()
     {
-     $BrandWinter=BrandWinter::all();
-     return view('admin.brandwinter',compact('BrandWinter'));
+     $MainCategoryProductSomer=MainCategoryProductSomer::all();
+     return view('admin.MainCategoryProductSommer',compact('MainCategoryProductSomer'));
 
     }
 
-    public function save_brand(Request $request)
+
+
+    public function save_product(Request $request)
     {
 
-$brandwinter= new BrandWinter();
+         $MainCategoryProductSomer= new MainCategoryProductSomer();
 
 
         if($request->file('img')){
@@ -45,13 +46,13 @@ $brandwinter= new BrandWinter();
                     PATHINFO_EXTENSION);
                     $new_au = uniqid() . "." . $ext;
                     $path = $request->img->move('uploads', $new_au);
-                    $brandwinter->img= $new_au;
+                    $MainCategoryProductSomer->img= $new_au;
 
 
             }
 
 
-            $brandwinter->type= $request->type;
+            $MainCategoryProductSomer->title= $request->title;
 
 
 
@@ -59,18 +60,18 @@ $brandwinter= new BrandWinter();
         }
 
 
-        $brandwinter->save();
+        $MainCategoryProductSomer->save();
+
         $notification = array('message' => 'successfully', 'alert_type' => 'success');
-
-
 
         return redirect()->back()->with($notification);
     }
 
 
-    public function Delete_brand(Request $request ,$id)
+
+    public function Delete_product(Request $request ,$id)
     {
-        $BrandWinter = BrandWinter::find($id);
+        $BrandWinter = MainCategoryProductSomer::find($id);
         $BrandWinter->delete();
         $notification = array('message' => 'removed successfully', 'alert_type' => 'success');
 
@@ -79,5 +80,6 @@ $brandwinter= new BrandWinter();
 
 
     }
+
 
 }

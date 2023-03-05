@@ -16,11 +16,23 @@ class SettingController extends Controller
     {
           $setting = Setting::all();
         // dd(count($setting));
-    
+
      //   return view('products.index',compact('products'))
          //   ->with('i', (request()->input('page', 1) - 1) * 5);
          return view('setting.index',compact('setting'));
     }
+
+
+    public function boxsommer()
+    {
+          $setting = Setting::all();
+        // dd(count($setting));
+
+     //   return view('products.index',compact('products'))
+         //   ->with('i', (request()->input('page', 1) - 1) * 5);
+         return view('setting.box',compact('setting'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,15 +51,15 @@ class SettingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
         //dd($request->all());
         $request->validate([
             'address' => 'required',
             'telephone' => 'required',
         ]);
-    
+
         Setting::create($request->all());
-     
+
         return redirect()->route('setting.index')
                         ->with('success','Contact created successfully.');
     }
@@ -89,9 +101,9 @@ class SettingController extends Controller
             'address' => 'required',
             'telephone' => 'required',
         ]);
-    
+
         $setting->update($request->all());
-    
+
         return redirect()->route('setting.index')
                         ->with('success','Contact updated successfully');
     }
@@ -105,7 +117,7 @@ class SettingController extends Controller
     public function destroy(Setting $setting)
     {
         $setting->delete();
-    
+
         return redirect()->route('setting.index')
                         ->with('success','Contact deleted successfully');
     }

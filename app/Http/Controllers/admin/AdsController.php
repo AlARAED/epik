@@ -70,6 +70,7 @@ class AdsController extends Controller
         $ads->save();
         $ads=Ads::find(1);
 
+
         return redirect()->route('All_ads');
     }
 }

@@ -60,10 +60,60 @@ return new class extends Migration
 
           BrandWinter::create([
             'img' => 'atomic-hd.png',
-            'type'=>'1'
+            'type'=>'2'
 
 
           ]);
+
+
+
+
+
+
+
+        BrandWinter::create([
+            'img' => 'k2-hd.png',
+            'type'=>'2'
+
+
+          ]);
+
+
+          BrandWinter::create([
+            'img' => 'flow-hd.png',
+            'type'=>'2'
+
+
+          ]);
+
+          BrandWinter::create([
+            'img' => 'head-hd (1).png',
+            'type'=>'2'
+
+
+          ]);
+
+          BrandWinter::create([
+            'img' => 'lowa-hd.png',
+            'type'=>'2'
+
+
+          ]);
+
+          BrandWinter::create([
+            'img' => 'k2-hd.png',
+            'type'=>'2'
+
+
+          ]);
+
+          BrandWinter::create([
+            'img' => 'atomic-hd.png',
+            'type'=>'2'
+
+
+          ]);
+
 
 
     }

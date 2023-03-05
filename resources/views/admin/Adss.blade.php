@@ -33,7 +33,7 @@
 
 
 
-                    <img src="{{ asset('uploads/'.$ads->img1)}}" class="img-fluid" alt="Responsive image" width="440px" height="162">
+                    <img src="{{ asset('uploads/'.$ads->img1)}}" class="img-fluid" alt="Responsive image" style=" width:550px  ; height:200px; max-width: 100%;">
                     <br>
 
                     <br>
@@ -44,10 +44,10 @@
 
                   </div>
                 </div>
-
+<br><br>
                 <div class="col-lg-6">
 
-                    <img src="{{ asset('uploads/'.$ads->img2)}}" class="img-fluid" alt="Responsive image" width="440px" height="162">
+                    <img src="{{ asset('uploads/'.$ads->img2)}}" class="img-fluid" alt="Responsive image" style=" width:550px  ; height:200px; max-width: 100%;">
                     <br>
 
                     <br>
