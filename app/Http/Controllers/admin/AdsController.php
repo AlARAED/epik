@@ -73,4 +73,9 @@ class AdsController extends Controller
 
         return redirect()->route('All_ads');
     }
+
+
+
+
+    //شمشش
 }
